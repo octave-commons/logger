@@ -48,6 +48,7 @@ export interface Logger {
   readonly child: (context: LogContext) => Logger;
   readonly setLevel: (level: LogLevel) => void;
   readonly getLevel: () => LogLevel;
+  readonly audit?: (message: string, context?: LogContext) => void;
 }
 
 export interface LoggerFactory {
